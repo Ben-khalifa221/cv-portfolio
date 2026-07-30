@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalifa Seck - CV Interactif</title>
+    <meta name="description" content="CV interactif de Khalifa Seck, Développeur Web Junior">
+
+    <!-- Police Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="header">
+        <div class="header-container">
+
+            <!-- Bouton menu hamburger (mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#formation" class="nav-link">Formation</a></li>
+                    <li><a href="#competences" class="nav-link">Compétences</a></li>
+                    <li><a href="#experiences" class="nav-link">Expériences</a></li>
+                    <li><a href="#projets" class="nav-link">Projets</a></li>
+                    <li><a href="#langues" class="nav-link">Langues</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bouton mode sombre / clair -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== SECTION ACCUEIL / PROFIL ===================== -->
+        <section class="hero" id="accueil">
+            <div class="hero-container">
+
+                <!-- Photo de profil -->
+                <div class="hero-photo">
+                    <img src="images/photo-profil.jpg" alt="Photo de Khalifa Seck">
+                </div>
+
+                <!-- Nom et titre -->
+                <div class="hero-text">
+                    <h1>Khalifa <span>Seck</span></h1>
+                    <p class="hero-subtitle">Développeur Web Junior</p>
+
+                    <!-- Coordonnées -->
+                    <ul class="hero-contact">
+                        <li>📞 781640163</li>
+                        <li>✉️ seckkhalifa361@gmail.com</li>
+                        <li>📍 Saint-Louis, Sénégal</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION À PROPOS ===================== -->
+        <section class="section" id="apropos">
+            <div class="section-container">
+                <h2 class="section-title">À propos de moi</h2>
+                <article class="about-content">
+                    <p>
+                        Étudiant passionné par le développement web, je me forme activement à la
+                        création de sites modernes et performants. Curieux et motivé, je développe
+                        mes compétences à travers mes études universitaires, des cours en ligne et
+                        des projets personnels.
+                    </p>
+                </article>
+
+                <article class="about-content">
+                    <h3>Objectif professionnel</h3>
+                    <p>
+                        Intégrer une entreprise innovante en tant que Développeur Web Junior pour
+                        consolider mes acquis, collaborer sur des projets concrets et continuer à
+                        progresser dans le domaine du web.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION FORMATION ===================== -->
+        <section class="section section-alt" id="formation">
+            <div class="section-container">
+                <h2 class="section-title">Formation</h2>
+
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <h3>Licence 2 en Informatique</h3>
+                        <p class="timeline-place">Université IBA DER THIAM</p>
+                        <p class="timeline-date">2025 - Présent</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h3>Baccalauréat Scientifique</h3>
+                        <p class="timeline-place">Lycée Charles de Gaulle</p>
+                        <p class="timeline-date">Obtenu en 2023</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h3>Udemy — HTML &amp; CSS</h3>
+                        <p class="timeline-place">
+                            Initiation et bonnes pratiques HTML5, mise en page CSS, flexbox,
+                            grid et responsive design.
+                        </p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h3>JavaScript</h3>
+                        <p class="timeline-place">Fondamentaux du langage JavaScript.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h3>Force-N — Certificat en développement web</h3>
+                        <p class="timeline-place">
+                            Programmation web et conception d'interfaces utilisateur.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION COMPÉTENCES ===================== -->
+        <section class="section" id="competences">
+            <div class="section-container">
+                <h2 class="section-title">Compétences</h2>
+
+                <div class="skills-list">
+
+                    <!-- Chaque compétence utilise une barre de progression -->
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>HTML5</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>Java</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="70"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>PHP</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>C</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="70"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>MySQL</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-label">
+                            <span>Git &amp; GitHub / GitLab</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="75"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION EXPÉRIENCES ===================== -->
+        <section class="section section-alt" id="experiences">
+            <div class="section-container">
+                <h2 class="section-title">Expériences</h2>
+
+                <p class="about-content">
+                    N'ayant pas encore d'expérience professionnelle salariée, je construis mon
+                    expérience pratique à travers mes projets personnels et universitaires,
+                    détaillés ci-dessous.
+                </p>
+
+                <div class="experience-list">
+
+                    <article class="experience-item">
+                        <div>
+                            <h3>Développement d'une boutique en ligne</h3>
+                            <p>Récupération dynamique des produits via une API et gestion d'un panier d'achat.</p>
+                        </div>
+                        <span class="experience-type">Projet personnel</span>
+                    </article>
+
+                    <article class="experience-item">
+                        <div>
+                            <h3>Développement du site Travel Agency</h3>
+                            <p>Conception d'une interface responsive pour une agence de voyage.</p>
+                        </div>
+                        <span class="experience-type">Projet personnel</span>
+                    </article>
+
+                    <article class="experience-item">
+                        <div>
+                            <h3>Développement du Système Hospitalier</h3>
+                            <p>Application de gestion hospitalière en Java avec base de données MySQL.</p>
+                        </div>
+                        <span class="experience-type">Projet universitaire</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION PROJETS ===================== -->
+        <section class="section" id="projets">
+            <div class="section-container">
+                <h2 class="section-title">Projets</h2>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <span class="project-tag">Projet personnel</span>
+                        <h3>Travel Agency</h3>
+                        <p>
+                            Développement d'un site web responsive présentant une agence de voyage
+                            avec une interface moderne.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag">Projet personnel</span>
+                        <h3>Boutique en ligne</h3>
+                        <p>
+                            Développement d'une boutique en ligne en HTML, CSS et JavaScript
+                            utilisant la Fake Store API pour afficher dynamiquement les produits
+                            et gérer un panier d'achat.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag project-tag-alt">Projet universitaire</span>
+                        <h3>Système Hospitalier</h3>
+                        <p>
+                            Application de gestion hospitalière développée en Java avec MySQL
+                            dans le cadre d'un projet universitaire.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION LANGUES & CENTRES D'INTÉRÊT ===================== -->
+        <section class="section section-alt" id="langues">
+            <div class="section-container">
+                <div class="two-columns">
+
+                    <!-- Langues -->
+                    <div class="column">
+                        <h2 class="section-title">Langues</h2>
+
+                        <div class="skill">
+                            <div class="skill-label">
+                                <span>Wolof</span>
+                                <span>Langue maternelle</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-label">
+                                <span>Français</span>
+                                <span>Courant</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-label">
+                                <span>Anglais</span>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Centres d'intérêt -->
+                    <div class="column">
+                        <h2 class="section-title">Centres d'intérêt</h2>
+                        <ul class="interests-list">
+                            <li>💻 Technologie &amp; Innovation</li>
+                            <li>✈️ Voyage</li>
+                            <li>⚽ Sport</li>
+                            <li>📚 Lecture</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SECTION CONTACT ===================== -->
+        <section class="section" id="contact">
+            <div class="section-container">
+                <h2 class="section-title">Contact</h2>
+
+                <form class="contact-form" id="contact-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email" placeholder="votre@email.com">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Envoyer</button>
+
+                    <p class="form-success" id="form-success"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Khalifa Seck - Tous droits réservés</p>
+            <ul class="footer-links">
+                <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</button>
+
+    <!-- Script JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

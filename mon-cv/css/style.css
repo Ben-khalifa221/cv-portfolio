@@ -1,0 +1,682 @@
+/* ==========================================================================
+   CV INTERACTIF - KHALIFA SECK
+   Feuille de style organisée par sections
+   ========================================================================== */
+
+/* ==========================================================================
+   1. VARIABLES CSS (thème clair par défaut)
+   ========================================================================== */
+:root {
+    /* Couleurs principales du CV (thème Bleu Océan) */
+    --color-primary: #1E3A5F;      /* Bleu marine : header, boutons, titres, liens actifs */
+    --color-secondary: #2E6F95;    /* Bleu moyen : hover, remplissage barres */
+    --color-accent: #F2994A;       /* Orange doux : petites touches, accents */
+    --color-bg: #FDFDFD;           /* Fond */
+    --color-bg-alt: #E5E7EB;       /* Fond alterné / fond des barres */
+    --color-text: #2C2C2C;         /* Texte principal */
+    --color-text-light: #5b6472;   /* Texte secondaire, plus clair */
+    --color-border: #E5E7EB;
+    --color-white: #ffffff;
+
+    /* Typographie */
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+
+    /* Ombres et arrondis */
+    --shadow: 0 2px 10px rgba(31, 41, 55, 0.08);
+    --shadow-hover: 0 10px 24px rgba(31, 41, 55, 0.15);
+    --radius: 15px;
+
+    /* Transition commune */
+    --transition: all 0.3s ease;
+}
+
+/* Thème sombre : appliqué lorsque la classe "dark-theme" est ajoutée au body */
+/* NE PAS MODIFIER : le mode sombre conserve ses couleurs actuelles */
+body.dark-theme {
+    --color-bg: #0F172A;           /* Fond général sombre */
+    --color-bg-alt: #1E293B;       /* Surfaces (cartes, sections alternées) */
+    --color-primary: #2E6F95;      /* Bleu un peu plus clair pour rester lisible */
+    --color-secondary: #2E6F95;
+    --color-accent: #F2994A;
+    --color-text: #F8FAFC;
+    --color-text-light: #b8c1cf;
+    --color-border: #334155;
+    --color-white: #1E293B;
+}
+
+/* ==========================================================================
+   2. RESET & BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement fluide pour les ancres */
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--color-text);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section-container,
+.header-container,
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+.header {
+    background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-link {
+    color: #f0f0f0;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+/* Effet hover sur les liens de navigation : accent doré */
+.nav-link:hover {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Bouton de changement de thème (contour doré) */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+/* Bouton hamburger (masqué sur desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   4. SECTION HERO (PROFIL)
+   ========================================================================== */
+.hero {
+    background-color: var(--color-primary);
+    padding: 60px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-accent);
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-text h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.hero-text h1 span {
+    color: var(--color-accent);
+}
+
+.hero-subtitle {
+    color: var(--color-accent);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    margin-top: 6px;
+    margin-bottom: 18px;
+}
+
+.hero-contact li {
+    color: #e4e9e6;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   5. SECTIONS GÉNÉRALES
+   ========================================================================== */
+.section {
+    padding: 70px 0;
+}
+
+.section-alt {
+    background-color: var(--color-bg-alt);
+}
+
+.section-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* Petit trait décoratif sous les titres de section (vert principal) */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.about-content {
+    margin-bottom: 24px;
+}
+
+.about-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   6. FORMATION (TIMELINE)
+   ========================================================================== */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Effet hover : légère élévation de la carte */
+.timeline-item:hover {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.timeline-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.timeline-place {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.timeline-date {
+    color: var(--color-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   7. BARRES DE COMPÉTENCES
+   ========================================================================== */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #E5E7EB;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* La largeur finale est fixée par JavaScript à partir de l'attribut data-level */
+.skill-progress {
+    height: 100%;
+    width: 0%; /* Démarre à 0, animée ensuite en JS */
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    transition: width 1.2s ease-out;
+}
+
+/* ==========================================================================
+   8. EXPÉRIENCES
+   ========================================================================== */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.experience-item:hover {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.experience-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.experience-item p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.experience-type {
+    background-color: var(--color-bg-alt);
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   9. PROJETS
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Effet hover : la carte se soulève légèrement */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-family: var(--font-title);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.project-tag-alt {
+    background-color: var(--color-accent);
+    color: #1F2937;
+}
+
+.project-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-light);
+}
+
+/* ==========================================================================
+   10. LANGUES & CENTRES D'INTÉRÊT
+   ========================================================================== */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.interests-list li {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.interests-list li:hover {
+    transform: translateX(6px);
+    color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   11. FORMULAIRE DE CONTACT
+   ========================================================================== */
+.contact-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-white);
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.15);
+}
+
+/* Bordure rouge lorsqu'un champ est invalide (classe ajoutée en JS) */
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #e63946;
+}
+
+.error-message {
+    color: #e63946;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+/* Bouton plein : fond vert principal, hover vert émeraude */
+.btn-submit {
+    align-self: flex-start;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: var(--radius);
+    font-family: var(--font-title);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.form-success {
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--color-primary);
+    padding: 24px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-container p {
+    color: #d8ded9;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d8ded9;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   13. BOUTON RETOUR EN HAUT
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-hover);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 200;
+}
+
+/* Classe ajoutée en JS lorsque l'utilisateur défile vers le bas */
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   14. RESPONSIVE - TABLETTE (max-width: 900px)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================================
+   15. RESPONSIVE - MOBILE (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Affiche le bouton hamburger et cache le menu par défaut */
+    .hamburger {
+        display: flex;
+        order: 1;
+    }
+
+    .theme-toggle {
+        order: 2;
+    }
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition);
+    }
+
+    /* Classe ajoutée en JS pour ouvrir le menu mobile */
+    .nav.open {
+        max-height: 400px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 10px 24px 20px;
+        gap: 16px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .experience-item {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+}
